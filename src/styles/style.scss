@@ -1,0 +1,394 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Girassol&family=Spectral+SC:wght@300&family=Zilla+Slab+Highlight&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  color:   #677880;
+  font-family: 'Girassol', cursive;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+a {
+  color: #677880;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+li {
+  margin-right: 15px;
+}
+
+#by {
+  text-align: center;
+}
+
+.homepage {
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titled h1 {
+  font-size: 90px;
+  padding-top: 150px;
+  padding-bottom: 25px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  transition: background-color 1s ease 0s;
+}
+
+.navbar .button {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  color: #677880;
+  outline: none;
+  border: none;
+}
+
+.button:hover {
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button:focus{ 
+  outline: 0;
+  box-shadow: none!important;
+  
+}
+
+.typewriter {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+#statistic {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#artists {
+  font-weight: bold;
+}
+
+// * ANIMATION * //
+
+.text-1 {
+  animation: text1;
+}
+.text-2 {
+  animation: text2;
+}
+
+.text-1, .text-2 {
+  font-size: 25px;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 20s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.text-1::after, .text-2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes text1 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  10%, 40% {
+    width: 58vw;
+  }
+}
+
+@keyframes text2 {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  
+  60%, 90% {
+    width: 14em;
+  }
+}
+
+// *
+
+.artistSpotlight {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.artistSpotlight h2 {
+  font-size: 40px;
+}
+
+.artistSpotlight h3 {
+  font-size: 30px;
+}
+
+.text-edit {
+  font-size: 20px;
+  color: #52527a;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
+}
+
+.slider img {
+  flex-shrink: 0;
+  padding: 10px;
+  border: none;
+  height: 100%;
+}
+
+footer {
+ padding-top: 20px;
+}
+
+#by {
+  font-family: futura;
+  font-style: italic;
+  color: white;
+  // padding-left: 25px;
+  animation: glitch 1s linear infinite;
+}
+
+
+@keyframes glitch {
+  2%,64%{
+    transform: translate(1px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-1px,0) skew(0deg);
+  }
+  100% {
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+h1 {
+  font-size: 50px;
+  padding: 80px 0 0px 0;
+  text-align: center;
+  font-family: 'Girassol', cursive;
+}
+
+h2.artistsName {
+  padding: 5px 0 5px 0;
+  font-size: 20px;
+  font-family: 'Girassol', cursive;
+}
+
+
+p {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 14px;
+  width: 50vw;
+  color: #A7A6BA;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  text-align: center;
+
+}
+
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.artistCard {
+  margin-top: 30px;
+  background-color: #b3c1b8;
+  padding: 0 0 20px 0;
+  
+}
+
+img {
+border: 2px solid #677880;
+
+}
+
+.migrationACard {
+  margin-top: 30px;
+  background-color: #52527a;
+  padding: 0 0 20px 0;
+}
+
+.sGCard {
+  margin-top: 30px;
+  background-color: #36454f;
+  padding: 0 0 20px 0;
+}
+
+.similarArtistContainer{
+  display: flex;
+  flex-direction: row;
+  background-color: #A7A6BA
+}
+
+.similarArtistCard {
+  width: 15vw;
+  padding: 5px;
+  margin: 8px;
+  
+}
+
+.button-2, .button-3, .button-4{
+  color: #fddab8;
+  border: 1px solid #677880;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-image: -webkit-linear-gradient(30deg, #677880 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #677880 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  outline: none;
+  width: 120px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18px;
+}
+
+.button-3 {
+  border: 1px solid #36454f;
+  background-color: #36454f;
+  background-image: -webkit-linear-gradient(30deg, #36454f 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #36454f 50%, transparent 50%);
+
+}
+
+.button-4 {
+  border: 1px solid #52527a;
+  background-color: #52527a;
+  background-image: -webkit-linear-gradient(30deg, #52527a 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #52527a 50%, transparent 50%);
+
+}
+
+.button-2:hover, .button-3:hover, .button-4:hover {
+  background-position: 100%;
+  color: #677880;
+  background-color: #fddab8;
+}
+
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-evenly;
+  text-align: center;
+  
+}
+
+p#by {
+  padding: 0;
+}
+
+
+// @media only screen and (min-width: 650px) {
+//   body {
+//     height: 100vh;
+//   }
+// }
