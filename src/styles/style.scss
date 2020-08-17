@@ -45,6 +45,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  ul {
+    margin-bottom: 10vh;
+  }
+ 
 }
 
 .titled h1 {
@@ -88,7 +92,6 @@ li {
 .button:focus{ 
   outline: 0;
   box-shadow: none!important;
-  
 }
 
 .typewriter {
@@ -115,7 +118,7 @@ li {
 }
 
 .text-1, .text-2 {
-  font-size: 25px;
+  font-size: 2vw;
   color: white;
   overflow: hidden;
   white-space: nowrap;
@@ -149,7 +152,7 @@ li {
     width: 0;
   }
   10%, 40% {
-    width: 58vw;
+    width: 60vw;
   }
 }
 
@@ -159,7 +162,7 @@ li {
   }
   
   60%, 90% {
-    width: 14em;
+    width: 25vw;
   }
 }
 
@@ -169,14 +172,16 @@ li {
  display: flex;
  flex-direction: column;
  align-items: center;
-}
-
-.artistSpotlight h2 {
+ padding-top: 90px;
+ p {
+   font-size: 18px;
+ }
+ h2 {
   font-size: 40px;
 }
-
-.artistSpotlight h3 {
+h3 {
   font-size: 30px;
+}
 }
 
 .text-edit {

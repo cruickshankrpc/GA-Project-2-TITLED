@@ -17,7 +17,7 @@ const HomePage = () => {
     </Controller>
 
     <Controller>
-      <Scene triggerHook={'onEnter'} classToggle={'fade-in'}>
+      <Scene triggerHook={'onScroll'} classToggle={'fade-in'}>
         <div className="artistSpotlight">
           <h2> ARTIST SPOTLIGHT:</h2>
           <h3>ARCAMANORO NILES</h3>
