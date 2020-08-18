@@ -3,21 +3,26 @@ import { Controller, Scene } from 'react-scrollmagic'
 
 const HomePage = () => {
   
-  return <div className="homepage">
-    <div className="titled">
-      <h1> /titled </h1>
-    </div>
+  return <>
+  <div className="homepage">
+    
+
     <Controller>
-      <Scene >
-        <div className="typewriter">
-          <p><span className="text-1"><span id="statistic">85.4%</span> of the works in the collections of all major US museums belong to <span id="artists">white artists,</span></span></p>
-          <p><span className="text-2"><span id="artists">African American</span> artists have <span id="statistic">1.2%</span></span></p>
+      <Scene triggerHook={'onScroll'} classToggle={'fadeInUp'}>
+        <div className="titled">
+          <h1> /titled </h1>
         </div>
       </Scene>
     </Controller>
+    
+   
+    <div className="typewriter">
+      <p><span className="text-1"><span id="statistic">85.4%</span> of the works in the collections of all major US museums belong to <span id="artists">white artists,</span></span></p>
+      <p><span className="text-2"><span id="artists">African American</span> artists have <span id="statistic">1.2%</span></span></p>
+    </div>
+  
+   
 
-    <Controller>
-      <Scene triggerHook={'onScroll'} classToggle={'fade-in'}>
         <div className="artistSpotlight">
           <h2> ARTIST SPOTLIGHT:</h2>
           <h3>ARCAMANORO NILES</h3>
@@ -34,8 +39,7 @@ const HomePage = () => {
              Read more…</a>
           </p>
         </div>
-      </Scene>
-    </Controller>
+ 
   
     <div className="slider" >
       <img id="1" src="https://i.pinimg.com/564x/cd/ec/b4/cdecb4c88b223f347092ccb357712f07.jpg" alt="'My Heart is Like Paper, 2018'" />
@@ -55,7 +59,7 @@ const HomePage = () => {
     </footer>
   </div>
 
- 
+ </>
 }
 
 
