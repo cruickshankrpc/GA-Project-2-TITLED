@@ -28,7 +28,6 @@ const MigrationArtists = () => {
       setSimilarArtists([])
     } else {
 
-
       const id = event.target.id
 
       fetch(event.target.value, { headers: { 'X-XAPP-Token': token } })
