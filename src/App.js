@@ -12,8 +12,6 @@ import SouthernGothic from './components/SouthernGothic'
 import NavBar from './components/NavBar'
 import About from './components/About'
 
-
-
 const App = () => {
 
   return <HashRouter>

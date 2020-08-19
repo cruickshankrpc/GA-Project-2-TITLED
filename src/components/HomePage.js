@@ -5,8 +5,6 @@ const HomePage = () => {
   
   return <>
   <div className="homepage">
-    
-
     <Controller>
       <Scene triggerHook={'onCenter'} classToggle={'fadeInUp'}>
         <div className="titled">

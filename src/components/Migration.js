@@ -36,7 +36,6 @@ const MigrationArtists = () => {
 
           const newSimilarArtists = data._embedded.artists.map((similarArtist) => {
             return { ...similarArtist, originalArtistID: id }
-
           })
 
           const test = similarArtists.concat(newSimilarArtists)
@@ -50,7 +49,6 @@ const MigrationArtists = () => {
           })
           setKey(buttonKey)
           setSimilarArtists(result)
-
         })
     }
   }

@@ -20,7 +20,6 @@ const NavBar = () => {
     <Link to="/sg" className="button">
       SOUTHERN GOTHIC
     </Link>
-    {/* </div> */}
   </div>
 
 }
