@@ -8,7 +8,7 @@ const HomePage = () => {
     
 
     <Controller>
-      <Scene triggerHook={'onScroll'} classToggle={'fadeInUp'}>
+      <Scene triggerHook={'onCenter'} classToggle={'fadeInUp'}>
         <div className="titled">
           <h1> /titled </h1>
         </div>

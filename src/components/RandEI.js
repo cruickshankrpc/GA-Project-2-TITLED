@@ -17,11 +17,8 @@ const Artists = () => {
       .then(data => {
         const newData = data._embedded.artists.map((artist) => {
           return { ...artist, showSimilarArtist: false }
-
         })
-
         setArtistsData(newData)
-
       })
   }, [])
 
