@@ -15,3 +15,6 @@ By [Raquel Cruickshank](https://github.com/cruickshankrpc) and [Kianna Love](htt
 - Scroll Magic
 - Bulma 
 
+## Bugs
+- Sometimes when you click on Racial & Ethnic identity the API does not load- it also breaks when you refresh the page. 
+
