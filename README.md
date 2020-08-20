@@ -10,7 +10,6 @@ During Project 1, in the wake of the murder of George Floyd, agonising over the 
 So, for this project, Kianna and I decided to address the underrepresentation of Black, Asian and minority ethnic groups by shining a light on POC artists and other works that explore their lived experience.
 
 ![HOMEPAGE](./media/TITLED_HOMEPAGE%20%20(1).gif)
-![SPOTLIGHT](./media/SPOTLIGHT%20(1).gif)
 
 
 Please visit [here](https://cruickshankrpc.github.io/GA-Project-2-TITLED/).
@@ -26,6 +25,8 @@ Please visit [here](https://cruickshankrpc.github.io/GA-Project-2-TITLED/).
       - [Solution](#solution)
   - [Challenges](#challenges)
   - [Wins](#wins)
+  - [Bugs](#bugs)
+  - [Future Features](#future-features)
 
 ## Brief
 Build a React application that: 
@@ -70,8 +71,7 @@ Our plan was as follows:
 7. Refactor code
 
 #### First Hurdle
-Alas, disaster struck at the first hurdle.\
-The Artsy API proved to be a nightmare to retrieve information from - none of the exhibitions we liked on their website had endpoints and, once we found the 'Genome Project', the endpoint only returned ONE artwork for each of only FIVE artists, which would hardly populate the page with the gallery of artworks we envisioned.
+Alas, disaster struck. The Artsy API proved to be a nightmare to retrieve information from - none of the exhibitions we liked on their website had endpoints and, once we found the 'Genome Project', the endpoint only returned ONE artwork for each of only FIVE artists, which would hardly populate the page with the gallery of artworks we envisioned.
 
 #### Solution
 We discovered we could access the nested endpoint 'similar artists' to retrieve another five artists with one artwork each:
@@ -83,6 +83,37 @@ Now, we could plan our MVP and wireframe:
 
 We didn't start writing code until DAY 2, and so the pressure was on to build AND style in a short space of time.
 
+This is the function we created to display similar artists:
+```javascript
+function displaySimilar(event, buttonKey) {
+    if (buttonKey === key) {
+      setSimilarArtists([])
+    
+    } else {
+      const id = event.target.id
+      fetch(event.target.value, { headers: { 'X-XAPP-Token': `${token}` } })
+        .then(resp => resp.json())
+        .then(data => {
+         const newSimilarArtists = data._embedded.artists.map((similarArtist) => {
+         return { ...similarArtist, originalArtistID: id }
+       })
+       const combinedArtists = similarArtists.concat(newSimilarArtists)
+       const result = []
+       const artistExists = {}
+       combinedArtists.forEach((artist) => {
+          if (!artistExists.hasOwnProperty(artist.id)) {
+             result.push(artist)
+             artistExists[artist.id] = true
+            }
+          })
+          setKey(buttonKey)
+          setSimilarArtists(result)
+        })
+    }
+  }
+```
+**How it turned out:**
+
 ![MIGRATION](./media/PAGE.gif)
 
 
@@ -91,7 +122,7 @@ We didn't start writing code until DAY 2, and so the pressure was on to build AN
 - Realising our token expired every 7 days (We wrote a refresh token function post-course).
 
 ## Wins
-- Built a full application in 48 hours! 
+- Built a full application in 48 hours! Used React Router to navigate between our components. 
 ```javascript
   const App = () => {
 
@@ -108,12 +139,41 @@ We didn't start writing code until DAY 2, and so the pressure was on to build AN
     </Switch>
   </HashRouter>
 }
+
+export default App
 ```
 - 💁🏻‍♀️💁🏻‍♀️ Pair-programming. It was really fun to bounce ideas off a partner. We problem solved and dealt with challenges together, but also split off to work on separate components. 
-- STYLING
-- Using React Scroll-Magic
-- Building a Carousel 
+- STYLING: Chuffed with the final design. 
+- **React hooks**: developed confidence using **useState** and **useEffect**.
+```javascript 
+  const [artistsData, setArtistsData] = useState([])
+  const [similarArtists, setSimilarArtists] = useState([])
+  const token = useContext(ApiContext)
+  const [key, setKey] = useState('')
 
+  useEffect(() => {
+    fetch('https://api.artsy.net/api/artists?gene_id=5266f899cd530eb849000222', { headers: { 'X-XAPP-Token': token } })
+      .then(resp => resp.json())
+      .then(data => {
+        const newData = data._embedded.artists.map((artist) => {
+          return { ...artist, showSimilarArtist: false }
+        })
+        setArtistsData(newData)
+      })
+  }, [])
+```
+- Using React Scroll-Magic. I had a lot of fun using this for the first time. 
+- Building a Carousel. 
+- Creating the type-writer animation. I developed a love of tinkering with animations on this project. 
+
+## Bugs
+- For some reason, the 'Racial and Ethnic Identity' API images do not return on first click, but do if you click on another page and return to it. It also breaks if you refresh page. 
+- Type-script animation moves the page in mobile.
+- Sometimes the 'similar artists' button is sticky/breaks.
+
+## Future Features 
+- Make MOBILE FIRST ! 
+- More pages on profiles of artists/ ways to support.
 
 
 
