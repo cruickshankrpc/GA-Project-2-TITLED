@@ -47,7 +47,6 @@ Build a React application that:
 - Scroll Magic
 - Bulma 
 
-![ABOUT](./media/TITLED_ABOUT.gif)
 
 ## BUILD
 
@@ -115,6 +114,15 @@ function displaySimilar(event, buttonKey) {
 **How it turned out:**
 
 ![MIGRATION](./media/PAGE.gif)
+
+Once we completed our MVP, I created the 'About' page with added links to resources:
+
+![ABOUT](./media/TITLED_ABOUT.gif)
+
+![guardian](./media/guardian.png)
+![study](./media/study.png)
+![diversity](./media/diversity.png)
+![donate](./media/donate.png)
 
 
 ## Challenges
