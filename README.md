@@ -12,7 +12,7 @@ So, for this project, Kianna and I decided to address the underrepresentation of
 ![HOMEPAGE](./media/TITLED_HOMEPAGE%20%20(1).gif)
 
 
-Please visit [here](https://cruickshankrpc.github.io/GA-Project-2-TITLED/).
+Please visit [here](https://cruickshankrpc.github.io/TITLED/).
 
 
 ## Contents
