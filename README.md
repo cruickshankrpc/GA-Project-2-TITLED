@@ -24,7 +24,7 @@ Please visit [here](https://cruickshankrpc.github.io/TITLED/).
       - [First Hurdle](#first-hurdle)
       - [Solution](#solution)
   - [Challenges](#challenges)
-  - [Wins & Key Learnings](#wins-&-key-learnings)
+  - [Wins & Key Learnings](#wins)
   - [Bugs](#bugs)
   - [Future Features](#future-features)
 
