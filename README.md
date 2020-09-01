@@ -129,7 +129,7 @@ Once we completed our MVP, I created the 'About' page with added links to resour
 - Retrieving nested information from the API.
 - Realising our token expired every 7 days (We wrote a refresh token function post-course).
 
-## Wins
+## Wins & Key Learnings
 - Built a full application in 48 hours! Used React Router to navigate between our components. 
 ```javascript
   const App = () => {
