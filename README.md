@@ -32,10 +32,10 @@ Please visit [here](https://cruickshankrpc.github.io/TITLED/).
 Build a React application that: 
 - Consumes a public API.
 - Has several components.
-- Includes a router with several 'pages'
+- Includes a router with several 'pages'.
 - Includes wireframes - designed before building the app.
 - Have semantically clean HTML.
-- Be deployed online
+- Be deployed online.
 
 ## Technologies Used 
 - HTML5
